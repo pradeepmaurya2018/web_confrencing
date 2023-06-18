@@ -30,7 +30,8 @@ while True:
 
 
     print("{}: {}".format(img_counter, size))
-    client_socket.sendall(struct.pack(">L", size) + data)
+    client_socket.sendall(struct.pack(">"
+                                      "L", size) + data)
     img_counter += 1
     if cv2.waitKey(1) & 0xFF == ord('q'):
             break
